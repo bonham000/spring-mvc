@@ -3,8 +3,8 @@ import axios from 'axios';
 
 export default class extends Component {
   componentDidMount() {
-    axios.get('http://localhost:8080/greeting')
-      .then(res => console.log(res))
+    axios.get('/greeting?name=Sean')
+      .then(({ data }) => console.log(data))
       .catch(err => console.warn(err));
   }
   render() {
